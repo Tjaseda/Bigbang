@@ -1,0 +1,23 @@
+/*!
+Theme Name: Bigbang
+Theme URI: http://underscores.me/
+Author: Tjasa
+Author URI: https://github.com/Tjaseda
+Description: wordpress starter theme with gulp, scss, autofrefix, bable, webpack js compiler, picturefill, pattern lab,...
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bigbang
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import 'base/normalize';
+@import 'base/wordpress';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/base';
