@@ -67,4 +67,4 @@ gulp.task('js', function(callback) {
   });
 });
 
-gulp.task('default', ['sass', 'browser-sync', 'watch', 'images', 'js']);
+gulp.task('default', gulp.series('sass', 'browser-sync', 'watch', 'images', 'js'));

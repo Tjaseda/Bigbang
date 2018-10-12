@@ -1,3 +1,9 @@
 node_modules
-public
+production
 debug.log
+.DS_Store
+patternlab.json
+.sass-cache/*
+/sass-cache
+Thumbs.db
+.idea/

@@ -4,10 +4,10 @@ var gulp = require('gulp'),
     del  = require('del');
 
 gulp.task('deleteDistFolder', function() {
-  return del('./public');
+  return del('./production');
 });
 
-gulp.task('copyFiles', ['deleteDistFolder'], function() {
+gulp.task('copyFiles', gulp.series('deleteDistFolder', function() {
   var pathsToCopy = [
     './**/*',
     '!./.git',
@@ -28,7 +28,7 @@ gulp.task('copyFiles', ['deleteDistFolder'], function() {
   ];
 
   return gulp.src(pathsToCopy)
-        .pipe(gulp.dest('./public'));
-});
+        .pipe(gulp.dest('./production'));
+}));
 
-gulp.task('build', ['deleteDistFolder', 'copyFiles']);
+gulp.task('build', gulp.series('deleteDistFolder', 'copyFiles'));
