@@ -1,1 +1,2 @@
-require('./gulp/maingulpfile');
+require('./gulp/main');
+require('./gulp/build');
